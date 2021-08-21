@@ -128,18 +128,18 @@
 #
 # 9) 여러 값 return
 
-def calc(a,b):
-    plus = a+b
-    minus = a-b
-    mul = a*b
-    div = a/b
-    return plus, minus, mul, div
-num0, num1, num2, num3 = calc(100, 50)
-print(num0); print(num1), print(num2), print(num3)
-print()
-
-result = calc()
-print(result)
+# def calc(a,b):
+#     plus = a+b
+#     minus = a-b
+#     mul = a*b
+#     div = a/b
+#     return plus, minus, mul, div
+# num0, num1, num2, num3 = calc(100, 50)
+# print(num0); print(num1), print(num2), print(num3)
+# print()
+#
+# result = calc()
+# print(result)
 
 # 10) 초를 입력하면 시, 분, 초를 반환하는 함수
 # hour, minute, second = hmTime(3672)

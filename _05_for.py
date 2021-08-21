@@ -76,15 +76,22 @@
 
 # 9) 구구단 9단을 역순으로 출력하세요
 # for i in range(9,0,-1):
-#    print("{0}X{1}={2}".format(9,i,9*i))
+#     print("{0}X{1}={2}".format(9,i,9*i))
 
 # 10) 구구단 9단을 짝수만 출력
+# for i in range(2,10,2):
+#     print("{0}X{1}={2}".format(9,i,9*i))
 
 # 11) 구구단 전체를 출력
+# for i in range(1,10):
+#     for j in range(1,10):
+#         print("{0}X{1}={2}".format(i,j,i*j))
 
-# 12) 구구단 전체를 출력하는데 각 단을 세로로 출력
-
-# 12-1) 구구단 전체를 출력하는데 각 단 별로 출력
+# 12) 구구단 전체를 출력하는데 각 단 별로 출력
+for i in range(1,10):
+    print()
+    for j in range(2,10):
+        print("{0}X{1}={2}".format(j,i,i*j),end=" ")
 
 # 13) 리스트 내포
 # datas = []
