@@ -73,7 +73,16 @@
 # 5) 구구단 함수 제작
 #     gugudan(2,7)
 #     2단 ~ 7단까지 출력하는 함수
+# def gugudan(start,end):
+#     for i in range(start,end+1):
+#         for j in range(1,10):
+#             print("{0}X{1}={2}".format(i,j,i*j),end="\t")
+#         print()
+#     print()
 #
+# gugudan(2,7)
+# gugudan(3,5)
+
 # def gugudan(start, end):
 #     pass
 #
@@ -84,7 +93,12 @@
 #     ***
 #     ****
 #     *****
-#
+
+# def star(num):
+#     for i in range(0,num):
+#         print("*"*(i+1))
+#     print()
+
 # 7) 별찍기 함수 제작
 #     star(5) => 아래 처럼 출력
 #     0
@@ -92,6 +106,15 @@
 #     **0
 #     ***0
 #     ****0
+
+# def star(num):
+#     for i in range(0,num):
+#         print("*"*i, end=" ")
+#         print("O")
+#     print()
+#
+# star(5)
+# star(9)
 
 # 8) return이란?
 # def add(a,b):
@@ -146,3 +169,15 @@
 # hour => 1
 # minute => 1
 # second = 12
+
+def hmsTime(total_sec):
+    hour = total_sec // 3600   #몫(시간)
+    tempSec = total_sec % 3600 #나머지 초(분계산전)
+    minute = tempSec // 60     #몫(분)
+    second = tempSec % 60      #나머지 초(분계산후)
+    return hour,minute,second
+
+h,m,s = hmsTime(3672)
+print("{0}시간 {1}분 {2}초".format(h,m,s))
+h,m,s = hmsTime(360)
+print("{0}시간 {1}분 {2}초".format(h,m,s))

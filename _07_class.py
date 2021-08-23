@@ -58,3 +58,103 @@
 # print(arith,add(10,20))
 # print(arith,add(10,20))
 # print(arith,add(10,20))
+
+# 3) 클래스 생성자
+# self는 C++,C#, Java의 this와 같다
+# class Human:
+#     def __init__(self,name,age):
+#         self.name = name
+#         self.age = age
+#     def showInfo(self):
+#         print("name:",self.name)
+#         print("age:",self.age)
+
+# 객체 = 클래스
+# hwanghwangpark = Human("박재횽",32)  #Human:__init__(park,"박재횽",32)
+# kim = Human("김도형",26)   #Human:__init__(kim,"김도형",26)
+#
+# hwang = Human("황도경",26) #Human:__init__(hwang,"황도경",26)
+#
+# hong.showInfo() #Human:showInfo(hong)
+# park.showInfo() #Human:showInfo(park)
+# kim.showInfo()  #Human:showInfo(kim)
+# hwang.showInfo()#Human:showInfo(hwang)
+
+# 4) 클래스 만들기
+# class Dog:
+#     def __init__(self,name,color):
+#         print(name,"생성자 호출~")
+#         self.name = name
+#         self.color = color
+#     def __del__(self):
+#         print(self.name,"소멸자 호출") #많이 안 쓰임 생성자가 주로 많이 쓰인다
+#     def play(self):
+#         print("{0}색을 가진  {1}가 즐겁게 뛰어다닌다".format(self.color,self.name))
+#
+# pipi = Dog("삐삐","white")
+# duggu = Dog("덕구","Black")
+# mery = Dog("메리","Yellow")
+#
+# print(pipi.name,pipi.color)
+# print(duggu.name,duggu.color)
+# print(mery.name,mery.color)
+#
+# pipi.play()
+# duggu.play()
+# mery.play()
+
+# 5) 클래스의 재사용성 : 포함
+# class Computer:
+#     def __init__(self,cpu,gpu,ram):
+#         self.cpu = cpu
+#         self.gpu = gpu
+#         self.ram = ram
+#     def intr0(self):
+#         print("cpu:",self.cpu)
+#         print("gpu:",self.gpu)
+#         print("ram:",self.ram)
+#
+# class Human:
+#     def __init__(self,name,age,pc):
+#         self.name = name
+#         self.age = age
+#         self.pc = pc
+#     def intro(self):
+#         print("name:",self.name)
+#         print("age:",self.age)
+#         self.pc.intro()
+#         print()
+#
+# albert = Human("알버트",24,Computer("i7-9700","RTX-2080","32G"))
+# albert.intro()
+# albert.pc = Computer("i5-5600","GTX-1060","16G")
+# albert.intro()
+
+# 6) 클래스의 재사용성 : 상속
+class Human:
+    def __init__(self,name,age):
+        self.name = name
+        self.age = age
+    def intro(self):
+        print("name:",self.name)
+        print("age:",self.age)
+
+class WhiteHouse(Human):
+    pass
+
+# wh = WhiteHouse("백수",24)
+# wh.intro()
+
+class Student(Human):
+    def __init__(self,name,age,stnum):
+        super().__init__(name,age)
+        self.stnum = stnum
+    def intro(self):
+        super().intro()
+        print("stnum:",self.stnum)
+    def study(self):
+        print(self.name,"학생이 열심히 공부한다.")
+
+# st0 = Student("홍길동",33,"1024")
+# st0.intro()
+# st0.study()

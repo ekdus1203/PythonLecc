@@ -82,16 +82,35 @@
 # for i in range(2,10,2):
 #     print("{0}X{1}={2}".format(9,i,9*i))
 
+# for i in range(2,10):
+#     for j in range(2,10,2):
+#         print("{0}X{1}={2}".format(i,j,i*j), end="\t");
+#     print()
+
+# for i in range(2,10):
+#     for j in range(2,10,2):
+#         if j%2==0:
+#         print("{0}X{1}={2}".format(i,j,i*j), end="\t");
+#     print()
+
+# for i in range(2,10):
+#     for j in range(2,10,2):
+#         if j%2!=0:
+#             continue
+#         print("{0}X{1}={2}".format(i,j,i*j), end="\t");
+#     print()
+
 # 11) 구구단 전체를 출력
-# for i in range(1,10):
+# for i in range(2,10):
 #     for j in range(1,10):
-#         print("{0}X{1}={2}".format(i,j,i*j))
+#         print("{0}X{1}={2}".format(i,j,i*j), end="\t")
 
 # 12) 구구단 전체를 출력하는데 각 단 별로 출력
-for i in range(1,10):
-    print()
-    for j in range(2,10):
-        print("{0}X{1}={2}".format(j,i,i*j),end=" ")
+# for i in range(1,10):
+#     print()
+#     for j in range(2,10):
+#         print("{0}X{1}={2}".format(j,i,i*j),end="\t")
+#     print()
 
 # 13) 리스트 내포
 # datas = []
