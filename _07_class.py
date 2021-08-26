@@ -131,29 +131,29 @@
 # albert.intro()
 
 # 6) 클래스의 재사용성 : 상속
-class Human:
-    def __init__(self,name,age):
-        self.name = name
-        self.age = age
-    def intro(self):
-        print("name:",self.name)
-        print("age:",self.age)
-
-class WhiteHouse(Human):
-    pass
+# class Human:
+#     def __init__(self,name,age):
+#         self.name = name
+#         self.age = age
+#     def intro(self):
+#         print("name:",self.name)
+#         print("age:",self.age)
+#
+# class WhiteHouse(Human):
+#     pass
 
 # wh = WhiteHouse("백수",24)
 # wh.intro()
 
-class Student(Human):
-    def __init__(self,name,age,stnum):
-        super().__init__(name,age)
-        self.stnum = stnum
-    def intro(self):
-        super().intro()
-        print("stnum:",self.stnum)
-    def study(self):
-        print(self.name,"학생이 열심히 공부한다.")
+# class Student(Human):
+#     def __init__(self,name,age,stnum):
+#         super().__init__(name,age)
+#         self.stnum = stnum
+#     def intro(self):
+#         super().intro()
+#         print("stnum:",self.stnum)
+#     def study(self):
+#         print(self.name,"학생이 열심히 공부한다.")
 
 # st0 = Student("홍길동",33,"1024")
 # st0.intro()
