@@ -8,6 +8,7 @@ clientSock.connect(('127.0.0.1', 9000))
 while True:
     s = input('전송 문자열 >> ')
     if s == '<stop>':
+        clientSock.close()
         break
     clientSock.send(s.encode())
     s = clientSock.recv(1024).decode('utf-8')

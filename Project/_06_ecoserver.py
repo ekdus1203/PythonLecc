@@ -2,9 +2,9 @@
 from socket import *
 
 # 2) 접속 수신 소켓 생성
-# AF_INET = IPPROTO_IPV4
-# SOCK_STREAM : TCP, 신뢰성 있는 통신
-serverSock = socket(AF_INET, SOCK_STREAM)
+# AF_INET = IPV4(ip주소가 4byte), IPv6(ip주소가 16byte)
+# SOCK_STREAM : TCP(신뢰성 있는 통신), UDP(빠른 속도)
+serverSock = socket(AF_INET, SOCK_STREAM) #소켓 객체
 
 # 3) 프로세스를 종료한 후 바로 재시작해도 주소할당될 수 있는 옵션
 # (서버는 보통 이렇게 처리한다)
@@ -27,12 +27,13 @@ while True:
     # 연결된 클라이언트와 대화를 계속 할 수 있도록 무한루프를 돌린다.
     while True:
         try:
-            s = connSock.recv(1024).decode('utf-8')
+            s = connSock.recv(1024).decode('utf-8') #들어오는 코드를 utf-8 로 해석하겠다
             connSock.send(s.encode())
             print('수신 : ' + s)
             if s == '':
                 connSock.close()
                 print('{0} 정상 접속 종료'.format(connAddr))
+                break
         except Exception as e:
             connSock.close()
             print('{0} 비정상 접속 종료'.format(connAddr))
